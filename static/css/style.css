@@ -1,0 +1,37 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Spectral', cursive;
+  min-height: 100vh;
+  background-color: #111;
+}
+
+nav {
+  background-color: rgba(17, 17, 17, 0.438);
+}
+
+.logo {
+  font-size: 30px;
+  font-family: 'Lobster', cursive;
+}
+
+.orange {
+  color: #C65102 !important;
+}
+
+.list li {
+  padding: 0 5px;
+}
+
+.list li a {
+  font-size: 25px;
+  color: #fff !important;
+}
+
+footer ul li {
+  list-style-type: none;
+  padding: 0 10px;
+}
