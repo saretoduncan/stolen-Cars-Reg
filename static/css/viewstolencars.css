@@ -2,48 +2,54 @@
   padding: 0;
   margin: 0;
 }
+
 body {
   font-family: 'Spectral', cursive;
   min-height: 100vh;
   background-color: #111;
 }
+
 nav {
   background-color: rgba(17, 17, 17, 0.438);
 }
+
 .logo {
   font-size: 30px;
   font-family: 'Lobster', cursive;
 }
+
 .orange {
   color: #C65102 !important;
 }
 
-#stolentext .col-md-8 h3{
+#stolentext .col-md-8 h3 {
   font-family: 'Spectral', cursive;
-  color: #C65102 ;
+  color: #C65102;
   margin-left: 5%;
   margin-top: 5%;
   margin-bottom: 2%;
 }
-#searchbox{
+
+#searchbox {
   background-color: #c4c4c4;
   color: #000;
   border-radius: 20px;
 }
-#search{
+
+#search {
   background-color: #c4c4c4;
   color: #000;
   border-radius: 15px;
-  margin:0 5px;
+  margin: 0 5px;
 }
 
-#titletext{
+#titletext {
   padding-top: 2%;
 }
 
-#titlestext .col-md-9 p{
+#titlestext .col-md-9 p {
   font-family: 'Spectral', cursive;
-  color: #fff ;
+  color: #fff;
   margin-top: 5%;
   display: inline;
   padding-left: 20%;
@@ -51,34 +57,64 @@ nav {
   font-size: 22px;
 }
 
-
 .viewbox {
-  margin-top: 2%;
-  width: auto;
-  height: 100px;
-  box-shadow: #c65102 1px 0px 10px 5px;
-  padding-top: 3%;
-  margin-bottom: 3%;
+  margin: 10px 0;
+  min-height: 100px;
+  box-shadow: 1px 0px 10px 5px #c65102;
 }
-.viewbox p{
-  font-family: 'Spectral', cursive;
-  color: #fff ;
-  display: inline;
-  padding-left: 6%;
-  font-size: 22px;
-}
-#view{
+
+.view {
   background-color: #C4C4C4 !important;
   color: #000 !important;
+}
+
+.mk {
+  background-color: #AAA6A6;
+}
+
+.pop {
+  display: none;
+  background-color: rgba(17, 17, 17, 0.472);
+}
+
+.flx {
+  display: flex;
+}
+
+.pop-up {
+  position: relative;
+  background-color: #c4c4c4;
+  width: 700px;
+  min-width: 375px;
+  min-height: 40vh;
+}
+
+.pop-up img {
+  width: 300px;
+  min-width: 200px;
+}
+
+.pop-up button {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: black;
+}
+
+.pop-up h4 {
+  background-color: #c65102;
+  width: 80%;
 }
 
 .list li {
   padding: 0 5px;
 }
+
 .list li a {
   font-size: 25px;
   color: #fff !important;
 }
+
 footer ul li {
   list-style-type: none;
   padding: 0 10px;
