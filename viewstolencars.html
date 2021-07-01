@@ -35,9 +35,7 @@
             <li class="nav-item">
               <a class="nav-link" href="./viewstolencars.html">View Stolen Cars</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./registration.html">Register Stolen cars</a>
-            </li>
+
             <li class="nav-item">
               <a class="nav-link" href="./contactUs.html">Contact Us</a>
             </li>
@@ -49,22 +47,9 @@
   <!-- end of nav section -->
 
   <!-- start of search section section -->
-  <div class="container-fluid">
-    <div class="row" id="stolentext">
-      <div class="col-md-8">
-        <h3> Stolen Cars In Our Database</h3>
-        <p></p>
-      </div>
-      <div class="col-md-4 d-flex align-items-center justify-content-center">
-        <input type="text" placeholder="Enter Chassis Number..." id="searchbox">
-        <button class="btn btn-primary" id="search">
-        <img src="static/images/search.png" alt="" width="20px">
-      </button>
-      </div>
-    </div>
-  </div>
+
   <!-- end of search section -->
-  <div class="container mb-3 d-flex justify-content-center">
+  <div class="container mb-3 d-flex justify-content-center mt-5">
     <button class="btn btn-danger fs-4 rptBtn">Report Stolen Car</button>
   </div>
   <!-- start of titles section section -->
@@ -99,7 +84,7 @@
       <div class=" container-fluid row">
 
         <div class="col-12 col-md-6 d-flex justify-content-center align-items-center ">
-          <img src="./static/images/wish.jpeg" alt="">
+          <img id="carImg" src="" alt="">
 
         </div>
         <div class="col-12 col-md-6 mb-2">
@@ -110,15 +95,15 @@
               <p class="text-center">Make</p>
             </div>
             <div class="col-6">
-              <p class="text-center">Toyota</p>
+              <p class="text-center" id="carMake"></p>
             </div>
           </div>
           <div class="row">
             <div class="col-6">
-              <p class="text-center">Year</p>
+              <p class="text-center">Vehicle Type</p>
             </div>
             <div class="col-6">
-              <p class="text-center">2017</p>
+              <p class="text-center" id="carType"></p>
             </div>
           </div>
           <div class="row mk">
@@ -126,7 +111,7 @@
               <p class="text-center">Exterior</p>
             </div>
             <div class="col-6">
-              <p class="text-center">black</p>
+              <p class="text-center" id="carExterior"></p>
             </div>
           </div>
           <div class="row">
@@ -134,7 +119,7 @@
               <p class="text-center">Interior</p>
             </div>
             <div class="col-6">
-              <p class="text-center">Grey</p>
+              <p class="text-center" id="carInterior"></p>
             </div>
           </div>
           <div class="row mk">
@@ -142,7 +127,7 @@
               <p class="text-center">Licence Plate</p>
             </div>
             <div class="col-6">
-              <p class="text-center">KCU 477F</p>
+              <p class="text-center" id="numberPlate"></p>
             </div>
           </div>
           <div class="row ">
@@ -150,7 +135,7 @@
               <p class="text-center">Chassis Number</p>
             </div>
             <div class="col-6">
-              <p class="text-center">BF-BK-34566-345</p>
+              <p class="text-center" id="chassis_Number"></p>
             </div>
           </div>
         </div>

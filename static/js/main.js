@@ -5,7 +5,7 @@ const rapoClose = document.querySelector(".rapo")
 const reportBtn = document.querySelector(".rptBtn")
 const registrationBtn = document.querySelector("#regBtn");
 const imgUpload = document.querySelector("#uploadimage");
-let view = document.querySelectorAll(".view");
+
 
 
 rapoClose.addEventListener('click', () => {
@@ -68,15 +68,15 @@ let reg = (e) => {
   e.preventDefault();
   imageUpload();
 
-  const make = document.querySelector('#make').value;
-  const model = document.querySelector('#model').value;
+  const make = document.querySelector('#make').value.toUpperCase();
+  const model = document.querySelector('#model').value.toUpperCase();
   const image = showImg();
-  const year = document.querySelector('#year').value;
-  const exterior = document.querySelector('#exteriorcolor').value;
-  const interior = document.querySelector('#interiorcolor').value;
-  const licence = document.querySelector('#license').value;
-  const chassis = document.querySelector('#chassisnumber').value;
-  const vehicleType = document.querySelector('#vehicletype').value;
+  const year = document.querySelector('#year').value.toUpperCase();
+  const exterior = document.querySelector('#exteriorcolor').value.toUpperCase();
+  const interior = document.querySelector('#interiorcolor').value.toUpperCase();
+  const licence = document.querySelector('#license').value.toUpperCase();
+  const chassis = document.querySelector('#chassisnumber').value.toUpperCase();
+  const vehicleType = document.querySelector('#vehicletype').value.toUpperCase();
   const newReg = new NewCar(image, make, model, year, exterior, interior, licence, chassis, vehicleType);
 
 
@@ -114,16 +114,58 @@ if (newLocalArr !== null) {
 
   })
 }
-viewBox.forEach(item => { ///pop-up opening
+const view = document.querySelectorAll(".view");
+view.forEach(item => { ///pop-up opening
   item.addEventListener('click', e => {
     let target = e.target;
-    if (target.classList.contains("view")) {
-      pop.classList.add("flx");
+    let parentDiv = target.parentElement.parentElement
+    for (let i = 0; i < newLocalArr.length; i++) {
+      if (parentDiv.querySelector("#plate").innerText === newLocalArr[i].licence) {
+        document.querySelector("#carMake").innerHTML = newLocalArr[i].make;
+        document.querySelector("#carType").innerHTML = newLocalArr[i].vehicleType;
+        document.querySelector("#carExterior").innerHTML = newLocalArr[i].exterior;
+        document.querySelector("#carInterior").innerHTML = newLocalArr[i].interior;
+        document.querySelector("#numberPlate").innerHTML = newLocalArr[i].licence;
+        document.querySelector("#chassis_Number").innerHTML = newLocalArr[i].chassis;
+        const imageDaraUrl = localStorage.getItem(newLocalArr[i].image);
+
+        if (imageDaraUrl) {
+          document.querySelector("#carImg").setAttribute('src', imageDaraUrl);
+        }
+      }
     }
+
+    pop.classList.add("flx");
+
+
   })
 })
+const searchBox = document.querySelector("#searchbox").value.toUpperCase();
+const searchBtn = document.querySelector("#searchBx")
+searchBtn.addEventListener("click", () => {
 
-//pop-up closing;
+  for (let i = 0; i < newLocalArr.length; i++) {
+    if (searchBox === newLocalArr[i].chassis) {
+
+      document.querySelector("#carMake").innerHTML = newLocalArr[i].make;
+      document.querySelector("#carType").innerHTML = newLocalArr[i].vehicleType;
+      document.querySelector("#carExterior").innerHTML = newLocalArr[i].exterior;
+      document.querySelector("#carInterior").innerHTML = newLocalArr[i].interior;
+      document.querySelector("#numberPlate").innerHTML = newLocalArr[i].licence;
+      document.querySelector("#chassis_Number").innerHTML = newLocalArr[i].chassis;
+      const imageDaraUrl = localStorage.getItem(newLocalArr[i].image);
+
+      if (imageDaraUrl) {
+        document.querySelector("#carImg").setAttribute('src', imageDaraUrl);
+      }
+
+    }
+
+    pop.classList.add("flx");
+  }
+});
+
+
 reportBtn.addEventListener('click', () => {
   document.querySelector(".reportTop").classList.add("flx");
-})
+});

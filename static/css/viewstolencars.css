@@ -96,7 +96,8 @@ nav {
   background-color: #c4c4c4;
   width: 700px;
   min-width: 375px;
-  min-height: 40vh;
+  min-height: 50vh;
+  border-radius: 20px;
 }
 
 .pop-up img {
