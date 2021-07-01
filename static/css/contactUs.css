@@ -70,3 +70,7 @@ footer ul li {
 #take input::placeholder {
     color: rgba(12, 1, 1, 0.418) !important;
 }
+
+#admire {
+    margin: top 5px;
+}
