@@ -22,6 +22,10 @@ nav {
   color: #C65102 !important;
 }
 
+.flx {
+  display: flex;
+}
+
 #stolentext .col-md-8 h3 {
   font-family: 'Spectral', cursive;
   color: #C65102;
@@ -63,6 +67,16 @@ nav {
   box-shadow: 1px 0px 10px 5px #c65102;
 }
 
+.ston {
+  height: 100vh;
+}
+
+.stolen {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+}
+
 .view {
   background-color: #C4C4C4 !important;
   color: #000 !important;
@@ -75,10 +89,6 @@ nav {
 .pop {
   display: none;
   background-color: rgba(17, 17, 17, 0.472);
-}
-
-.flx {
-  display: flex;
 }
 
 .pop-up {
@@ -115,7 +125,42 @@ nav {
   color: #fff !important;
 }
 
+.reportTop {
+  height: 100vh;
+  background-color: rgba(17, 17, 17, 0.74);
+  display: none;
+}
+
+.report {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  min-width: 25%;
+  height: 50vh;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.596);
+  box-shadow: 1px 0px 10px 5px #c65102;
+}
+
+form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+form .form-control {
+  margin: 10px;
+}
+
+.rapo {
+  top: 10px;
+  right: 10px;
+}
+
 footer ul li {
   list-style-type: none;
   padding: 0 10px;
+}
+
+.flx {
+  display: flex;
 }

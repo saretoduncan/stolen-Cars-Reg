@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Spectral&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="./static/css/registration.css">
+  <script src="https://use.fontawesome.com/4ffea7cb58.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" defer></script>
   <title>Stolen-Car-Reg</title>
 </head>
@@ -47,32 +48,32 @@
       <form action="">
         <div class="form-group">
           <input type="make" class="form-control" id="make" placeholder="Make">
-          <input type="model" class="form-control" id="model" placeholder="Model">
+          <input type="text" class="form-control" id="model" placeholder="Model">
         </div>
         <div class="form-group">
-          <input type="year" class="form-control" id="year" placeholder="Year">
-          <input type="exterior color" class="form-control" id="exteriorcolor" placeholder="Exterior Color">
+
+          <input type="date" class="form-control" id="year" placeholder="last seen">
+          <input type="text" class="form-control" id="exteriorcolor" placeholder="Exterior Color">
         </div>
         <div class="form-group">
           <input type="interior color" class="form-control" id="interiorcolor" placeholder="Interior Color">
-          <input type="vehicletype" class="form-control" id="vehicletype" placeholder="Vehicle Type">
+          <input type="text" class="form-control" id="vehicletype" placeholder="Vehicle Type">
         </div>
         <div class="form-group">
           <input type="chassisnumber" class="form-control" id="chassisnumber" placeholder="Chassis Number">
-          <input type="confirm chasis number" class="form-control" id="confirmchasisnumber" placeholder="Confirm Chassis Number">
+          <input type="text" class="form-control" id="license" placeholder="Licence Number">
         </div>
-        <div class="form-group" id="nis">
-          <input type="no image selected" class="form-control" id="noimageselected" placeholder="No Image Selected...">
-        </div>
+
         <div class="form-group" id="upi">
-          <input type="upload image" class="form-control" id="uploadimage" placeholder="Upload Image" style="  color: #000">
+          <input type="file" class="form-control btn btn-primary" id="uploadimage">
+          <div>
+            <img id="im" src="">
+          </div>
         </div>
 
-
-
-
-
-
+        <div class="d-flex justify-content-center">
+          <input type="submit" class="btn btn-warning" id="regBtn">
+        </div>
 
       </form>
 
@@ -100,6 +101,7 @@
       </ul>
     </div>
   </footer>
+  <!-- <script src="./static/js/main.js"></script> -->
 </body>
 
 </html>
