@@ -165,10 +165,12 @@ if (searchBtn) {
         if (imageDaraUrl) {
           document.querySelector("#carImg").setAttribute('src', imageDaraUrl);
         }
-
+        pop.classList.add("flx");
+      } else {
+        alert(`not in the database`)
       }
 
-      pop.classList.add("flx");
+
     }
   });
 }
