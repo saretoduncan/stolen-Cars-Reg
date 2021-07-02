@@ -121,6 +121,7 @@ document.querySelectorAll('#deleted').forEach(item => {
     if (par.classList.contains("parentReg")) {
       document.querySelector('.parentReg').remove();
 
+
     }
     // for (let i = 0; i < newLocalArr.length; i++) {
     //   if (par.querySelector("#plate").innerText === newLocalArr[i].licence) {
