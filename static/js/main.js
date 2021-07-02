@@ -107,30 +107,30 @@ if (newLocalArr !== null) {
     let parentDiv = document.createElement("div");
 
     parentDiv.setAttribute("class", "container-fluid row viewbox");
-    parentDiv.innerHTML = `<div class="d-flex align-items-center col-12 col-md-3"><p class="text-light fs-4" id="carTp">${item.make}</p></div><div class="d-flex align-items-center col-12 col-md-3"><p class="text-light fs-4" id="datte">${item.year}</p></div><div class="d-flex align-items-center col-12 col-md-3"><p class="text-light fs-4" id="plate">${item.licence}</p></div><div class="d-md-flex align-items-center justify-content-center col-12 col-md-3"><button class="btn btn-primary view">VIEW</button><button class="btn btn-danger ms-2 deleted ">Delete</button> </div>`
+    parentDiv.innerHTML = `<div class="d-flex align-items-center col-12 col-md-3"><p class="text-light fs-4" id="carTp">${item.make}</p></div><div class="d-flex align-items-center col-12 col-md-3"><p class="text-light fs-4" id="datte">${item.year}</p></div><div class="d-flex align-items-center col-12 col-md-3"><p class="text-light fs-4" id="plate">${item.licence}</p></div><div class="d-md-flex align-items-center justify-content-center col-12 col-md-3"><button class="btn btn-primary view">VIEW</button><button class="btn btn-danger ms-2  "id="deleted">Delete</button> </div>`
     parReg.appendChild(parentDiv);
     if (document.querySelector('.stolenReg')) {
       document.querySelector('.stolenReg').appendChild(parReg);
     }
   })
 }
-document.querySelectorAll('.deleted').forEach(item => {
-  addEventListener('click', (e) => {
+document.querySelectorAll('#deleted').forEach(item => {
+  item.addEventListener('click', (e) => {
     let target = e.target;
     let par = target.parentElement.parentElement.parentElement;
     if (par.classList.contains("parentReg")) {
       document.querySelector('.parentReg').remove();
 
     }
-    for (let i = 0; i < newLocalArr.length; i++) {
-      if (par.querySelector("#plate").innerText === newLocalArr[i].licence) {
-        let removed = newLocalArr.slice(i, i);
+    // for (let i = 0; i < newLocalArr.length; i++) {
+    //   if (par.querySelector("#plate").innerText === newLocalArr[i].licence) {
+    //     let removed = newLocalArr.slice(i, i);
 
 
 
 
-      }
-    }
+    //   }
+    // }
 
 
 
@@ -156,8 +156,9 @@ view.forEach(item => { ///pop-up opening
         }
       }
     }
-
     pop.classList.add("flx");
+
+
 
 
   })
